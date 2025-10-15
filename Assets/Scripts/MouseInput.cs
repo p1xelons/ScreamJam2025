@@ -1,16 +1,21 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class MouseInput : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public Vector2 WorldPos { get; private set; }
+    public event Action Clicked;
+
+    private void OnLook(InputValue value)
     {
-        
+        WorldPos = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnAction(InputValue _)
     {
-        
+        Clicked?.Invoke();
     }
 }

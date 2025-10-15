@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ObjectInteraction : MonoBehaviour
 {
 
+    [SerializeField]
     private List<GameObject> inventory;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +18,11 @@ public class ObjectInteraction : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddToInventory()
+    {
+        inventory.Add(this.gameObject);
     }
 
     
