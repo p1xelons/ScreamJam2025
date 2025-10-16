@@ -10,25 +10,42 @@ public class FloorButtonScripts : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        sceneManager = FindFirstObjectByType<SceneManagement>();
+        sceneManager = FindObjectOfType<SceneManagement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // check if mousebutton is clicked
+        if (Input.GetMouseButtonDown(0))
+        {
+            // change scene
+            ChangeRoom();
+        }
     }
 
-    private void OnMouseDown()
+    public void ChangeRoom()
     {
-        // check if its a hallway or room
-        if (roomType == RoomType.HallwayToRoom)
+        // get mouse world position
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.WorldToScreenPoint(transform.position).z;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        // check its within the object's area using the bounds
+        Bounds bound = GetComponent<SpriteRenderer>().bounds;
+
+        // if mouse is there, then spawn in chip
+        if (bound.Contains(worldPos))
         {
-            sceneManager.LoadRoom();
-        }
-        else if (roomType == RoomType.RoomToHallway)
-        {
-            sceneManager.LoadHallway();
+            if (roomType == RoomType.HallwayToRoom)
+            {
+                sceneManager.LoadRoom();
+            }
+            else if (roomType == RoomType.RoomToHallway)
+            {
+                sceneManager.LoadHallway();
+            }
         }
     }
+
 }
