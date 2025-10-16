@@ -1,13 +1,42 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UIElements;
+[System.Serializable]
+public class InventoryItem
+{
+    public string itemName;
+    public string positionSerialized;
+
+    public InventoryItem(string name, Vector3 pos)
+    {
+        itemName = name;
+        positionSerialized = SerializeVector3(pos);
+    }
+
+    // format: "x,y,z"
+    private string SerializeVector3(Vector3 position)
+    {
+        return position.x + "," + position.y + "," + position.z;
+    }
+
+    // turn back to vector3
+    public Vector3 DeserializePosition()
+    {
+        string[] parts = positionSerialized.Split(',');
+        float x = float.Parse(parts[0]);
+        float y = float.Parse(parts[1]);
+        float z = float.Parse(parts[2]);
+        return new Vector3(x, y, z);
+    }
+}
 public class Inventory
 {
-    public List<string> items;
+    public List<InventoryItem> items;
 
     public Inventory()
     {
-        items = new List<string>();
+        items = new List<InventoryItem>();
     }
 }
 public class InventoryManager : MonoBehaviour
@@ -50,11 +79,12 @@ public class InventoryManager : MonoBehaviour
     /// adds item to inventory
     /// </summary>
     /// <param name="itemName">name of item to add</param>
-    public void AddItem(string itemName)
+    public void AddItem(string itemName, Vector3 position)
     {
-        if (!inventory.items.Contains(itemName))
+        InventoryItem itemToAdd = new InventoryItem(itemName, position);
+        if (!inventory.items.Contains(itemToAdd))
         {
-            inventory.items.Add(itemName);
+            inventory.items.Add(itemToAdd);
             SaveInventory();
         }
     }
@@ -63,11 +93,12 @@ public class InventoryManager : MonoBehaviour
     /// removes item from inventroy
     /// </summary>
     /// <param name="itemName">name of item to add</param>
-    public void RemoveItem(string itemName)
+    public void RemoveItem(string itemName, Vector3 position)
     {
-        if (inventory.items.Contains(itemName))
+        InventoryItem itemToAdd = new InventoryItem(itemName, position);
+        if (inventory.items.Contains(itemToAdd))
         {
-            inventory.items.Remove(itemName);
+            inventory.items.Remove(itemToAdd);
             SaveInventory();
         }
     }
