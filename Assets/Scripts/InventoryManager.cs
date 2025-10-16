@@ -3,11 +3,11 @@ using System.IO;
 using UnityEngine;
 public class Inventory
 {
-    public List<string> inventoryItems;
+    public List<string> items;
 
     public Inventory()
     {
-        inventoryItems = new List<string>();
+        items = new List<string>();
     }
 }
 public class InventoryManager : MonoBehaviour
@@ -93,7 +93,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            // inventory = new Inventory();
+            inventory = new Inventory();
         }
     }
 }
