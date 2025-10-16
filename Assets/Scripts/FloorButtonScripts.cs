@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FloorButtonScripts : MonoBehaviour
 {
-    public enum RoomType { HallwayToRoom, RoomToHallway}
+    public enum RoomType { HallwayToRoom, RoomToHallway, HallwayToStair}
     public RoomType roomType;
     private SceneManagement sceneManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,6 +43,13 @@ public class FloorButtonScripts : MonoBehaviour
             }
             else if (roomType == RoomType.RoomToHallway)
             {
+                sceneManager.LoadHallway();
+            }
+            else if (roomType == RoomType.HallwayToStair)
+            {
+                // increase day
+                sceneManager.NextDay();
+                // load hallway
                 sceneManager.LoadHallway();
             }
         }

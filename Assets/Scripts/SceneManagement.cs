@@ -16,6 +16,11 @@ public class SceneManagement : MonoBehaviour
     {
         
     }
+    void Awake()
+    {
+        // Make sure the SceneManager persists across scene changes
+        DontDestroyOnLoad(gameObject);
+    }
 
     /// <summary>
     /// Loads the hallway of that specific day
@@ -42,7 +47,8 @@ public class SceneManagement : MonoBehaviour
     {
         currentDay++;
         // if the player is on the last room
-        if (currentDay == 8)
+        // temp 3 for testing
+        if (currentDay == 3)
         {
             // reset to day 1
             currentDay = 1;
