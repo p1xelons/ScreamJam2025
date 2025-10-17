@@ -416,6 +416,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1217288990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321618554889280807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1045547971}
+  dialogueBox: {fileID: 612744167}
+  lines:
+  - "It\u2019s foggy out today"
+  textSpeed: 0
 --- !u!1 &1235050556
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +535,7 @@ MonoBehaviour:
   textComponent: {fileID: 1045547971}
   dialogueBox: {fileID: 612744167}
   lines:
-  - calendar text
+  - Says October 1st
   textSpeed: 0
 --- !u!114 &2020727863
 MonoBehaviour:
@@ -640,12 +657,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6289389546250766280, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7321618554889280813}
+    - targetCorrespondingSourceObject: {fileID: 6289389546250766280, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7321618554889280820}
     - targetCorrespondingSourceObject: {fileID: 3718409058363120188, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7321618554889280812}
+    - targetCorrespondingSourceObject: {fileID: 3718409058363120188, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1217288990}
     - targetCorrespondingSourceObject: {fileID: 9151702514794696616, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7321618554889280811}
+    - targetCorrespondingSourceObject: {fileID: 9151702514794696616, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7321618554889280818}
     - targetCorrespondingSourceObject: {fileID: 40759402626557592, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2020727863}
@@ -695,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8482d0c9de576f64d829ee4611d493d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 7321618554889280818}
 --- !u!114 &7321618554889280812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,6 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c244701e700407e41a18ed2bdc00d852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 1217288990}
 --- !u!114 &7321618554889280813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292719944671d2641afb7dfca07f9f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 7321618554889280820}
 --- !u!114 &7321618554889280814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469812fb36cb06746838c837abaf291d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 2083777641}
 --- !u!114 &7321618554889280815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +773,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bd7e009da8a7a4bb802965ee395ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 7321618554889280822}
+--- !u!114 &7321618554889280818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321618554889280806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1045547971}
+  dialogueBox: {fileID: 612744167}
+  lines:
+  - A grocery list. I should probably go out soon
+  textSpeed: 0
+--- !u!114 &7321618554889280820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321618554889280808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1045547971}
+  dialogueBox: {fileID: 612744167}
+  lines:
+  - Doesn't seem to turn on.
+  textSpeed: 0
 --- !u!114 &7321618554889280822
 MonoBehaviour:
   m_ObjectHideFlags: 0
