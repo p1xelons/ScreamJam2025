@@ -9,20 +9,37 @@ public class Dialogue : MonoBehaviour
     TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    private bool isDialougeActive;
+    private bool hasBeenClicked;
 
     private int index;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isDialougeActive = false;
+        hasBeenClicked = false;
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!isDialougeActive && !hasBeenClicked && Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = Camera.main.WorldToScreenPoint(transform.position).z;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            Bounds bound = GetComponent<SpriteRenderer>().bounds;
+            if (bound.Contains(worldPos))
+            {
+                hasBeenClicked = true;
+                StartDialogue();
+            }
+        }
+
+        if (isDialougeActive && Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
             {
@@ -34,6 +51,7 @@ public class Dialogue : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+   
     }
 
     void StartDialogue()
@@ -61,6 +79,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            isDialougeActive = false;
             gameObject.SetActive(false);
         }
     }
