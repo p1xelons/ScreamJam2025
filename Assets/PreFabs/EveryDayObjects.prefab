@@ -45,6 +45,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5728618619188374561}
     m_Modifications:
+    - target: {fileID: 7313942194342575829, guid: ce276c1d74be47442a5633198b85c552, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
     - target: {fileID: 7561204401269420794, guid: ce276c1d74be47442a5633198b85c552, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -133,16 +137,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3030907366982090524, guid: ce276c1d74be47442a5633198b85c552, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce276c1d74be47442a5633198b85c552, type: 3}
+--- !u!1 &7452090416705577996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8623424170507874166, guid: ce276c1d74be47442a5633198b85c552, type: 3}
+  m_PrefabInstance: {fileID: 1209122321373563770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7490073696414411322 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8589978639426167104, guid: ce276c1d74be47442a5633198b85c552, type: 3}
   m_PrefabInstance: {fileID: 1209122321373563770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9191307858345332522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8019151258090308688, guid: ce276c1d74be47442a5633198b85c552, type: 3}
+  m_PrefabInstance: {fileID: 1209122321373563770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2148338830775671763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,11 +278,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 839027034635470484, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+    - {fileID: 1644093342563111995, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+    - {fileID: 7832903012629467136, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+    - {fileID: 3241400451859866018, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+    - {fileID: 406372067762780179, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+    - {fileID: 314176891151578165, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8419816011736439313, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769655568730164405}
+    - targetCorrespondingSourceObject: {fileID: 8419816011736439313, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821785126249143636}
+    - targetCorrespondingSourceObject: {fileID: 1818218956798390754, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5927382129660880381}
+    - targetCorrespondingSourceObject: {fileID: 1818218956798390754, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1032365181746346762}
+    - targetCorrespondingSourceObject: {fileID: 1357553289236452711, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49432716008641454}
+    - targetCorrespondingSourceObject: {fileID: 1357553289236452711, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4735190250270493671}
+    - targetCorrespondingSourceObject: {fileID: 8504177806574028947, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445695018393953830}
+    - targetCorrespondingSourceObject: {fileID: 8504177806574028947, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 345045939741558469}
+    - targetCorrespondingSourceObject: {fileID: 4224368810039975175, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9056168318897861154}
+    - targetCorrespondingSourceObject: {fileID: 4224368810039975175, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5336284337983617984}
+    - targetCorrespondingSourceObject: {fileID: 4976010896764515383, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5131180371165997770}
+    - targetCorrespondingSourceObject: {fileID: 4976010896764515383, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1709457183159228983}
   m_SourcePrefab: {fileID: 100100000, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+--- !u!1 &40759402626557592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4976010896764515383, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5131180371165997770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40759402626557592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d48fe198b8a2745ba92665eb292569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1709457183159228983}
+--- !u!114 &1709457183159228983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40759402626557592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - It's Tuesday today, weird...
+  - I thought it was Monday?
+  textSpeed: 0
 --- !u!114 &1136435420000751678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5358144463893824145, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
@@ -273,11 +372,190 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debed6f6e4e288840a7af4eab5faf86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3550995893173700798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8419816011736439313, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1769655568730164405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3550995893173700798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40bd7e009da8a7a4bb802965ee395ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 2821785126249143636}
+--- !u!114 &2821785126249143636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3550995893173700798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - "I have so much work to do\u2026 but I will deal with that next week"
+  - I hope my boss forgives my absence
+  textSpeed: 0
+--- !u!1 &3718409058363120188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8504177806574028947, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445695018393953830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718409058363120188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244701e700407e41a18ed2bdc00d852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 345045939741558469}
+--- !u!114 &345045939741558469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718409058363120188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - Looking outside, it's hard to see anything. It's very foggy out.
+  - It almost looks like there is no ground
+  textSpeed: 0
 --- !u!4 &3798908291779305752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8153475792874353591, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
   m_PrefabInstance: {fileID: 5016616351654941359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6289389546250766280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1357553289236452711, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &49432716008641454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289389546250766280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292719944671d2641afb7dfca07f9f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 4735190250270493671}
+--- !u!114 &4735190250270493671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289389546250766280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - Checking my computer I see a message from my boss.
+  - He asks why I wasn't at work yesterday.
+  - I'll get back to him later.
+  textSpeed: 0
+--- !u!1 &6675748053268718413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1818218956798390754, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5927382129660880381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675748053268718413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469812fb36cb06746838c837abaf291d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1032365181746346762}
+--- !u!114 &1032365181746346762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675748053268718413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - "I can\u2019t feel any air coming from this at all"
+  textSpeed: 0
+--- !u!1 &9151702514794696616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4224368810039975175, guid: 432b5da901496bb4cb795e981b3e9314, type: 3}
+  m_PrefabInstance: {fileID: 5016616351654941359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9056168318897861154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9151702514794696616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8482d0c9de576f64d829ee4611d493d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 5336284337983617984}
+--- !u!114 &5336284337983617984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9151702514794696616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 9191307858345332522}
+  dialogueBox: {fileID: 7452090416705577996}
+  lines:
+  - '"Don''t forget to buy eggs - Celia"'
+  textSpeed: 0
 --- !u!1001 &7356551938871887108
 PrefabInstance:
   m_ObjectHideFlags: 0
