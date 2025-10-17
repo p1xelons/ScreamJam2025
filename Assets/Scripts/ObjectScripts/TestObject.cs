@@ -7,6 +7,11 @@ public class TestObject : MonoBehaviour, IInteractable
         Debug.Log("You clicked on the thing");
     }
 
+    void Start()
+    {
+        InteractablesManager.AddToInteractablesEvent.Invoke(transform);
+    }
+
     void OnEnable()
     {
         InteractablesManager.AddToInteractablesEvent.Invoke(transform);

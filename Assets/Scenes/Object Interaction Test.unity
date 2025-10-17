@@ -313,6 +313,10 @@ PrefabInstance:
       propertyPath: interactablesManager
       value: 
       objectReference: {fileID: 672946904}
+    - target: {fileID: 1337656696160237825, guid: a4b4f383ae7251146bb5d1ff57589dbc, type: 3}
+      propertyPath: interactiveCursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 674010d4c5a6c8a4f93d614b233f2889, type: 3}
     - target: {fileID: 8089207207698738443, guid: a4b4f383ae7251146bb5d1ff57589dbc, type: 3}
       propertyPath: m_Name
       value: CursorController
