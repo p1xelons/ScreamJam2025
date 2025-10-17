@@ -574,8 +574,12 @@ MonoBehaviour:
   textComponent: {fileID: 1285722917}
   dialogueBox: {fileID: 1991580639}
   lines:
-  - line 1
-  - line 2
+  - The game is now over!
+  - Sorry that this was so short, but making games is hard...
+  - We're going to keep working on this so hopefully next time there will be more
+    to uncover!
+  - We sincerely hope you enjoyed this sneak peak at Revolve.
+  - Thank you for playing!!!
   textSpeed: 0
 --- !u!212 &897523433
 SpriteRenderer:
