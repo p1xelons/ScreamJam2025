@@ -7,6 +7,7 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI textComponent;
+    [SerializeField] private GameObject dialogueBox;
     public string[] lines;
     public float textSpeed;
     private bool isDialougeActive;
@@ -35,7 +36,9 @@ public class Dialogue : MonoBehaviour
             Bounds bound = GetComponent<SpriteRenderer>().bounds;
             if (bound.Contains(worldPos))
             {
+                Debug.Log("Clicked inside bounds!");
                 hasBeenClicked = true;
+                dialogueBox.SetActive(true);
                 StartDialogue();
             }
         }
@@ -62,7 +65,7 @@ public class Dialogue : MonoBehaviour
         isDialougeActive = true;
         index = 0;
         textComponent.text = string.Empty;
-        StartCoroutine(TypeLine());
+        typingCoroutine = StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
@@ -86,7 +89,7 @@ public class Dialogue : MonoBehaviour
         {
             isDialougeActive = false;
             textComponent.text = string.Empty;
-            //gameObject.SetActive(false);
+            dialogueBox.SetActive(false);
         }
     }
 }
