@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Day1_Hallway.unity
-    guid: 1859cf1ad0e176f4a8bcbbbf3cb6d5ea
+    path: Assets/Scenes/MainMenu.unity
+    guid: 02102796866a66f4e9f1acac7430a94a
   - enabled: 1
     path: Assets/Scenes/Day1_Room.unity
     guid: 0d4becbf160264f4c95796c01bab6fb6
+  - enabled: 1
+    path: Assets/Scenes/Day1_Hallway.unity
+    guid: 1859cf1ad0e176f4a8bcbbbf3cb6d5ea
   - enabled: 1
     path: Assets/Scenes/Day2_Hallway.unity
     guid: b12b56974fe7b7e4e920ea8533cf5bfe
