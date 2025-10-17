@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class WindowObject : MonoBehaviour, IInteractable
+{
+    public void OnClickAction()
+    {
+
+    }
+
+    void Start()
+    {
+        InteractablesManager.AddToInteractablesEvent.Invoke(transform);
+    }
+}
