@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     private Coroutine typingCoroutine;
+    private static bool anyDialogueActive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,12 +23,13 @@ public class Dialogue : MonoBehaviour
         isDialougeActive = false;
         hasBeenClicked = false;
         textComponent.text = string.Empty;
+        anyDialogueActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isDialougeActive && !hasBeenClicked && Input.GetMouseButtonDown(0))
+        if (!isDialougeActive && !hasBeenClicked && !anyDialogueActive && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = Camera.main.WorldToScreenPoint(transform.position).z;
@@ -36,9 +38,9 @@ public class Dialogue : MonoBehaviour
             Bounds bound = GetComponent<SpriteRenderer>().bounds;
             if (bound.Contains(worldPos))
             {
-                Debug.Log("Clicked inside bounds!");
                 hasBeenClicked = true;
                 dialogueBox.SetActive(true);
+                anyDialogueActive = true;
                 StartDialogue();
             }
         }
@@ -89,6 +91,8 @@ public class Dialogue : MonoBehaviour
         {
             isDialougeActive = false;
             textComponent.text = string.Empty;
+            anyDialogueActive = false;
+            hasBeenClicked = false;
             dialogueBox.SetActive(false);
         }
     }
