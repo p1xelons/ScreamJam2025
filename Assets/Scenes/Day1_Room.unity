@@ -499,6 +499,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EveryDayObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 1709457183159228983, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: It's Monday today.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709457183159228983, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: Maybe I should get out of here today.
+      objectReference: {fileID: 0}
     - target: {fileID: 5728618619188374561, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
