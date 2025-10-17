@@ -1,5 +1,7 @@
 using Mono.Cecil;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class FloorButtonScripts : MonoBehaviour
@@ -7,10 +9,12 @@ public class FloorButtonScripts : MonoBehaviour
     public enum RoomType { HallwayToRoom, RoomToHallway, HallwayToStair}
     public RoomType roomType;
     private SceneManagement sceneManager;
+    private AudioSource soundEffect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sceneManager = FindObjectOfType<SceneManagement>();
+        soundEffect = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,21 +41,31 @@ public class FloorButtonScripts : MonoBehaviour
         // if mouse is there, then spawn in chip
         if (bound.Contains(worldPos))
         {
-            if (roomType == RoomType.HallwayToRoom)
-            {
+            // Start the coroutine to handle sound + scene change
+            StartCoroutine(SoundAndChange());
+        }
+    }
+
+    private IEnumerator SoundAndChange()
+    {
+        if (soundEffect != null && soundEffect.clip != null)
+        {
+            soundEffect.PlayOneShot(soundEffect.clip);
+            yield return new WaitForSeconds(soundEffect.clip.length);
+        }
+
+        switch (roomType)
+        {
+            case RoomType.HallwayToRoom:
                 sceneManager.LoadRoom();
-            }
-            else if (roomType == RoomType.RoomToHallway)
-            {
+                break;
+            case RoomType.RoomToHallway:
                 sceneManager.LoadHallway();
-            }
-            else if (roomType == RoomType.HallwayToStair)
-            {
-                // increase day
+                break;
+            case RoomType.HallwayToStair:
                 sceneManager.NextDay();
-                // load hallway
                 sceneManager.LoadHallway();
-            }
+                break;
         }
     }
 
