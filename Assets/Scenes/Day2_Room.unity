@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915722246}
   - component: {fileID: 915722245}
+  - component: {fileID: 915722247}
   m_Layer: 0
   m_Name: roomBackground
   m_TagString: Untagged
@@ -298,6 +299,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915722247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915722244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b408e29fb76ef64c81dcd314df191c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 
 --- !u!114 &1185092458 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1441009740321915864, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
@@ -358,7 +372,7 @@ MonoBehaviour:
   textComponent: {fileID: 1637134574}
   dialogueBox: {fileID: 1637134575}
   lines:
-  - The key for my desk drawer...
+  - The key for my window...
   - I should hold onto this.
   textSpeed: 0
 --- !u!114 &1191145459
@@ -576,6 +590,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 445695018393953830, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 915722247}
+    - target: {fileID: 445695018393953830, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1185092458}
     - target: {fileID: 1155174380155209220, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       propertyPath: m_Name
       value: EveryDayObjects

@@ -17,4 +17,9 @@ public class StartGame : MonoBehaviour
         System.Environment.Exit(0);
     }
 
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+
 }
