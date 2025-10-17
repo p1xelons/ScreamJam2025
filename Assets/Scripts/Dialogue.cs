@@ -13,6 +13,7 @@ public class Dialogue : MonoBehaviour
     private bool hasBeenClicked;
 
     private int index;
+    private Coroutine typingCoroutine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,16 +40,18 @@ public class Dialogue : MonoBehaviour
             }
         }
 
-        if (isDialougeActive && Input.GetMouseButtonDown(0))
+        else if (isDialougeActive && Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == lines[index])
+            // line still typing, skip to full line
+            if (textComponent.text != lines[index])
             {
-                NextLine();
+                StopCoroutine(typingCoroutine);
+                textComponent.text = lines[index];
             }
+            // go to next line or end
             else
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                NextLine();
             }
         }
    
@@ -56,7 +59,9 @@ public class Dialogue : MonoBehaviour
 
     void StartDialogue()
     {
+        isDialougeActive = true;
         index = 0;
+        textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 
@@ -74,13 +79,14 @@ public class Dialogue : MonoBehaviour
         if (index < lines.Length -1)
         {
             index++;
-            textComponent.text += string.Empty;
+            textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
             isDialougeActive = false;
-            gameObject.SetActive(false);
+            textComponent.text = string.Empty;
+            //gameObject.SetActive(false);
         }
     }
 }
