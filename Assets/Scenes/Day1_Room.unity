@@ -503,6 +503,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890301428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321618554889280805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17a4a759547ae74084741386dd860c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1045547971}
+  dialogueBox: {fileID: 612744167}
+  lines:
+  - calendar text
+  textSpeed: 0
 --- !u!114 &2020727863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d48fe198b8a2745ba92665eb292569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 1890301428}
 --- !u!114 &2083777641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +649,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 40759402626557592, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2020727863}
+    - targetCorrespondingSourceObject: {fileID: 40759402626557592, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1890301428}
   m_SourcePrefab: {fileID: 100100000, guid: 81e62243a5c34584a9a5c512b677dcfc, type: 3}
 --- !u!1 &7321618554889280805 stripped
 GameObject:

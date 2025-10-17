@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     private Coroutine typingCoroutine;
-    private static bool anyDialogueActive;
+    private static bool anyDialougueActive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,43 +23,37 @@ public class Dialogue : MonoBehaviour
         isDialougeActive = false;
         hasBeenClicked = false;
         textComponent.text = string.Empty;
-        anyDialogueActive = false;
+        anyDialougueActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isDialougeActive && !hasBeenClicked && !anyDialogueActive && Input.GetMouseButtonDown(0))
+        if (isDialougeActive && Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.WorldToScreenPoint(transform.position).z;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            Bounds bound = GetComponent<SpriteRenderer>().bounds;
-            if (bound.Contains(worldPos))
-            {
-                hasBeenClicked = true;
-                dialogueBox.SetActive(true);
-                anyDialogueActive = true;
-                StartDialogue();
-            }
-        }
-
-        else if (isDialougeActive && Input.GetMouseButtonDown(0))
-        {
-            // line still typing, skip to full line
             if (textComponent.text != lines[index])
             {
                 StopCoroutine(typingCoroutine);
                 textComponent.text = lines[index];
             }
-            // go to next line or end
             else
             {
                 NextLine();
             }
         }
-   
+
+    }
+
+    public void TriggerDialogue()
+    {
+        if (isDialougeActive || anyDialougueActive) return;
+
+        dialogueBox.SetActive(true);
+        anyDialougueActive = true;
+        isDialougeActive = true;
+        index = 0;
+        textComponent.text = string.Empty;
+        typingCoroutine = StartCoroutine(TypeLine());
     }
 
     void StartDialogue()
@@ -91,7 +85,7 @@ public class Dialogue : MonoBehaviour
         {
             isDialougeActive = false;
             textComponent.text = string.Empty;
-            anyDialogueActive = false;
+            anyDialougueActive = false;
             hasBeenClicked = false;
             dialogueBox.SetActive(false);
         }
